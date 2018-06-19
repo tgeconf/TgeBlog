@@ -117,7 +117,7 @@
 	module.exports = socketio;
 </pre>
 <p>5. 修改index.ejs</p>
-<pre>
+<pre><xmp>
 	<!DOCTYPE html>
 	<html>
 	  <head>
@@ -148,4 +148,4 @@
 	    </form>
 	  </body>
 	</html>
-</pre>
+</xmp></pre>
