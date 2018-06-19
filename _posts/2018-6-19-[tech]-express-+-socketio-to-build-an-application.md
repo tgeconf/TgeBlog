@@ -83,14 +83,14 @@
 	var funccore = {};
 
 	/**
-	 * chatroom app
+	 * message send/get app
 	 */
 	funccore.init = function(io) {
 	  io.on('connection', function(socket) {
 	    console.log('a user connected');
-	    socket.on('chat message', function(msg){
+	    socket.on('test message', function(msg){
 	    	console.log("message : " + msg);
-	      io.emit('chat message', msg);
+	      io.emit('test message', msg);
 	    });
 	    socket.on('disconnect', function(){
 	      console.log('user disconnected');
@@ -130,12 +130,12 @@
 				$(function () {
 					var socket = io();
 					$('form').submit(function(){
-						socket.emit('chat message', $('#m').val());
+						socket.emit('test message', $('#m').val());
 						$('#m').val('');
 						return false;
 					});
 					
-					socket.on("chat message", function(obj) {
+					socket.on("test message", function(obj) {
 						var curContent = $('#messages').html();
 						$('#messages').html(curContent+'<li>'+obj+'</li>');
 					});
