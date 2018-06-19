@@ -118,7 +118,6 @@
 </pre>
 <p>5. 修改index.ejs</p>
 <pre><xmp>
-	<!DOCTYPE html>
 	<html>
 	  <head>
 	    <title><%= title %></title>
