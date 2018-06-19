@@ -77,9 +77,9 @@
 </pre>
 <p>启动服务器之后，前端页面便可以从http://localhost:3000/socket.io/socket.io.js加载前端部分的socketio的代码</p>
 <p>3. 分离功能业务和socket.io的配置</p>
-<p>在根目录下新建model/，创建funccore.js:</p>
+<p>在根目录下新建model/funccore.js:</p>
 <pre>
-	// model/，创建funccore.js
+	// model/funccore.js
 	var funccore = {};
 
 	/**
