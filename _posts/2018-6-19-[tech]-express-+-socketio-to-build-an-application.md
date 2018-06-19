@@ -109,9 +109,9 @@
 
 	//get io
 	socketio.getSocketio = function(server){
-	  var io = socket_io.listen(server);
-	  // Start app
-	  funccore.init(io);
+		var io = socket_io.listen(server);
+		// Start app
+		funccore.init(io);
 	};
 
 	module.exports = socketio;
