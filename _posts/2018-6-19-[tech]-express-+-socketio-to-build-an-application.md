@@ -119,32 +119,32 @@
 <p>5. 修改index.ejs</p>
 <pre><xmp>
 	<html>
-	  <head>
-	    <title><%= title %></title>
-	    <link rel='stylesheet' href='/stylesheets/style.css' />
-	  </head>
-	  <body>
-	  	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+		<head>
+			<title><%= title %></title>
+			<link rel='stylesheet' href='/stylesheets/style.css' />
+		</head>
+		<body>
+			<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 			<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 			<script>
-			  $(function () {
-			    var socket = io();
-			    $('form').submit(function(){
-			      socket.emit('chat message', $('#m').val());
-			      $('#m').val('');
-			      return false;
-			    });
-			    
-			    socket.on("chat message", function(obj) {
-		        var curContent = $('#messages').html();
-		        $('#messages').html(curContent+'<li>'+obj+'</li>');
-			    });
-			  });
+				$(function () {
+					var socket = io();
+					$('form').submit(function(){
+						socket.emit('chat message', $('#m').val());
+						$('#m').val('');
+						return false;
+					});
+					
+					socket.on("chat message", function(obj) {
+						var curContent = $('#messages').html();
+						$('#messages').html(curContent+'<li>'+obj+'</li>');
+					});
+				});
 			</script>
-	    <ul id="messages"></ul>
-	    <form action="">
-	      <input id="m" autocomplete="off" /><button>Send</button>
-	    </form>
-	  </body>
+			<ul id="messages"></ul>
+			<form action="">
+				<input id="m" autocomplete="off" /><button>Send</button>
+			</form>
+		</body>
 	</html>
 </xmp></pre>
