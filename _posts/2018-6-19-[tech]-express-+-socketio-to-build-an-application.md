@@ -1,5 +1,7 @@
 <p>我们在使用express应用生成器结合Socketio搭建应用的过程中，有一个常见的问题就是如何将Socket.io的配置代码从express自动生成的项目中分离。</p>
 
+<p><a href="https://github.com/tgeconf/Chatting">这里</a>是本文中用到的代码</p>
+
 <h3>express-generator生成express项目</h3>
 <p>通过如下命令安装express</p>
 <pre>
